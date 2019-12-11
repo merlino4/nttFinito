@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './style/index.css';
 import * as serviceWorker from './serviceWorker';
 import Home from './components/Home'
+import "./App.css";
+
 
 ReactDOM.render(<Home />, document.getElementById('root'));
 

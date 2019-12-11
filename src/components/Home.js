@@ -2,7 +2,7 @@ import React from "react";
 import { Route,BrowserRouter,Switch } from "react-router-dom";
 import Navigation from './Navigation'
 import Stores from "./Stores";
-import App from "../App"
+import Wizard from "./Wizard"
 
 
 
@@ -13,7 +13,7 @@ const Home = () => {
         <Navigation/>
         <Switch>
         <Route  exact path="/" component={Stores}/>
-        <Route  exact path="/wizard" component={App}/>
+        <Route  exact path="/wizard" component={Wizard}/>
         </Switch>
         </div>
         </BrowserRouter>
