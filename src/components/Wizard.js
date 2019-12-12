@@ -1,10 +1,6 @@
 import React from "react";
-/* import { Link, Route,Switch } from 'react-router-dom';
- */
 import { Route,BrowserRouter,Switch } from "react-router-dom";
-
 import logo from "../assets/img/logo.svg";
-import axios from "axios";
 import BreadCrumb from "./Breadcrumb";
 import CardContainer from "./CardContainer";
 import Button from "./Button";
@@ -13,20 +9,10 @@ import Stores from "./Stores";
 import wizard from '../lib/wizard'
 import Navigation from './Navigation'
 
-
-
-const URLS = {
-/*   STORES:
-    "https://mctsuite.it.nttdata-emea.com/preview/tag_ntt_project_work/stores.json", */
-  WIZARD:
-    "https://mctsuite.it.nttdata-emea.com/preview/tag_ntt_project_work/wizard_config.json"
-};
-
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
- //     stores: [],
       steps: [],
       results: [],
       tree: undefined,
@@ -54,7 +40,6 @@ class App extends React.Component {
     this.setState({
       selectedAnswers
     });
-    console.log(selectedAnswers);
   };
 
   submitChoice() {
@@ -66,14 +51,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-
-
-    axios.get(URLS.WIZARD).then(response => {
-      const wizard = response.data
-      this.setState({
-        steps: wizard.steps,
-        tree: wizard.tree,
-        results: wizard.results
+    wizard.load()
+          .then(wizard => {
+            this.setState({
+                steps: wizard.steps,
+                tree: wizard.tree,
+                results: wizard.results
       });
     });
   }
@@ -82,16 +65,11 @@ class App extends React.Component {
     const { activeIndex, steps, stores, selectedAnswers, tree, results, completed } = this.state;
     const currentSelection = selectedAnswers[activeIndex];
     const continueDisabled = typeof currentSelection !== "undefined";
-    const treeResult = wizard.navigate(selectedAnswers, tree, steps.length);
-    //console.log(wizard.navigate([1, 1, 0, 0], tree, 4))
-    // const completed = true;
-
-    console.log(selectedAnswers,tree, steps.length );
-    console.log(treeResult);
-    
+    const treeResult = wizard.navigate(selectedAnswers, tree, steps.length);    
     const currentStep = steps[activeIndex];
 
-    const cardContainer = currentStep && !completed ? (
+    const cardContainer = currentStep && !completed
+     ? (
       <CardContainer
         selectCard={this.selectCard}
         answers={currentStep.answers}
@@ -114,12 +92,6 @@ class App extends React.Component {
               )
             : null; 
 
-/*     const options = stores.map(store => (
-      <option key={store.storeCode} value={store.storeCode}>
-        {store.storeName}
-      </option>
-    )); */
-
     return (
       
       <div className="App">
@@ -127,6 +99,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <div className="App-container">
+
           {/* CHIP CONTAINER */}
           <BreadCrumb activeIndex={activeIndex} selectChip = {this.selectChip} steps={steps}></BreadCrumb>
 
@@ -141,13 +114,9 @@ class App extends React.Component {
           <div className="bottone">
           {button}
           </div>
-        
-              
+                     
           {/*  RESULTS */}
           {resultsComponent}
-
-          {/* <select>{options}</select> */}
-          {/* <Stores/> */}
           
       <BrowserRouter>
       <div>
@@ -157,11 +126,6 @@ class App extends React.Component {
       </Switch>
       </div>
       </BrowserRouter>
-      {/* <Switch>
-        <Route exact path="/stores" component={Stores}/>
-        <Route path="/products" component={Products}/>
-        <Route path="/category" component={Category}/>  
-      </Switch> */}
 
         </div>
       </div>

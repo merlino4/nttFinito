@@ -1,15 +1,10 @@
 import React from "react";
-import axios from "axios";
 import {Redirect} from 'react-router-dom'
 import '../style/store.css'
 import Header from '../components/Header'
+import stores from '../lib/stores'
+import Bg from '../assets/img/attivita_2.jpg'
 
-const URLS = {
-    STORES:
-      "https://mctsuite.it.nttdata-emea.com/preview/tag_ntt_project_work/stores.json",
-    WIZARD:
-      "https://mctsuite.it.nttdata-emea.com/preview/tag_ntt_project_work/wizard_config.json"
-  };
 
 class Stores extends React.Component {
     constructor(props) {
@@ -22,14 +17,11 @@ class Stores extends React.Component {
     }
 
 componentDidMount(){
-    axios
-      .get(URLS.STORES)
-      .then(r => r.data)
-      .then(stores => {
-        this.setState({
+  stores.load()
+  .then(stores => {
+    this.setState({
           stores
         });
-        console.log(this.state.stores)
       });
     }
 
@@ -48,9 +40,7 @@ componentDidMount(){
         selectedStore: e.target.value
       })
     }
-    // activeRedirect= () =>{
-    //   if()
-    // }
+
     render(){
         const options = this.state.stores.map(store => (
             <option key={store.storeCode} value={store.storeCode}>
@@ -59,31 +49,33 @@ componentDidMount(){
           ));
 
           
-        return(
-          <div className="stores">
-                  
-                  <Header />
-                  <div className="content">
-                  
-
-                   <select value={this.state.selectedStore} onChange={this.changeStore}> 
-                   <option value=""> Select a store </option>
-                     {options} 
-                     </select>
-                  
-                   {this.renderRedirect()}
-                   {/* {this.activeRedirect()} */}
-                   <button 
-                   onClick={this.setRedirect} 
-                   className="bottone" 
-                   disabled={!this.state.selectedStore}>
-                    Redirect</button>
-                   
-                   </div>
-            </div>
-            
-        );
-    }
-}
+          return(
+            <div className="stores">
+                    <img src={Bg} className="bg" alt="bg" id="bgPhoto"/>
+                    <Header 
+                    className ="backgroundLogo"/>
+                    <div className="content">
+                     <select value={this.state.selectedStore} onChange={this.changeStore}> 
+                     <option value=""> Select a store </option>
+                       {options} 
+                       </select>
+                     {this.renderRedirect()}
+                    <div className="contentButton">
+                     <button 
+                     onClick={this.setRedirect} 
+                     className="bottone" 
+                     disabled={!this.state.selectedStore}>
+                      <span>Continua</span></button>
+                      </div>
+                     </div>
+                     {/* <iframe  
+                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44787.87358807554!2d9.2356191!3d45.4447773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1576140021350!5m2!1sit!2sit"
+                     className="mappa"
+                     >
+                     </iframe> */}
+              </div>
+          );
+      }
+  }
 
 export default Stores;

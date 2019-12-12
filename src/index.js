@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
 import * as serviceWorker from './serviceWorker';
-import Home from './components/Home'
+import Home from './Home'
 import "./App.css";
 
 

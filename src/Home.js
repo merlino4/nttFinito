@@ -1,8 +1,8 @@
 import React from "react";
 import { Route,BrowserRouter,Switch } from "react-router-dom";
-import Navigation from './Navigation'
-import Stores from "./Stores";
-import Wizard from "./Wizard"
+import Navigation from './components/Navigation'
+import Stores from "./components/Stores";
+import Wizard from "./components/Wizard"
 
 
 

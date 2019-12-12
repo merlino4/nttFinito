@@ -1,21 +1,43 @@
 .stores{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* .mappa{
+  width: 600px;
+  height: 450px;
+  border: none;
+  z-index: 777;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.12);
+} */
+#bgPhoto{
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+height: auto;
+position: fixed;
+top: 0;
+left: 0;
+-webkit-backdrop-filter: blur(4px);
+backdrop-filter: blur(4px);
+background-color: rgba(0, 0, 0, 0.3); 
 }
 .stores .content  select{
-    width: 320px;
-  height: 40px;
-  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.12);
-  background-color: #ffffff;
+  width: 375px;
+height: 40px;
+box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.12);
+background-color: #ffffff;
 }
 .stores .content button{
-    width: 375px;
-    height: 61px;
-    object-fit: contain;
+  width: 375px;
+  height: 61px;
+  object-fit: contain;
+  border: none;
+  background-color: #66cc33;
 }
- .stores .content button a {
-    width: 320px;
+.stores .content button span{
+  width: 101px;
   height: 31px;
   font-size: 20px;
   font-weight: bold;
@@ -25,5 +47,36 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  text-decoration: none;
+  text-transform: uppercase;
+}
+.content{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-between;
+  z-index: 9999;
+}
+.App{
+  z-index: 8888;
+}
+.backgroundLogo{
+  background-color: white;
+}
+@media (max-width: 600px) {
+  .bottone{
+      display: flex;
+      flex-direction: column;
+  }
+  .content{
+      height: 100vh;
+  }
+  .contentButton{
+      display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  }
+  .mappa{
+      display: none;
+  }
 }
