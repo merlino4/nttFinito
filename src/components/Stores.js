@@ -54,7 +54,13 @@ componentDidMount(){
                     <img src={Bg} className="bg" alt="bg" id="bgPhoto"/>
                     <Header 
                     className ="backgroundLogo"/>
+                    
                     <div className="content">
+                      <h4>scopri come prenderti cura del tuo giardino</h4>
+                      <div
+                      className="paragraphSelect"
+                      ><p> seleziona il tuo negozio di riferimento</p>
+                      </div>
                      <select value={this.state.selectedStore} onChange={this.changeStore}> 
                      <option value=""> Select a store </option>
                        {options} 

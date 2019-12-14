@@ -14,12 +14,21 @@
     margin-right: 4px;
     line-height: 24px;
     cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .chip:hover{
+    transform: scale(0.9);
   }
   
   .chip.active {
     background-color: #66cc33;
     color: white;
+    transition: all 0.3s linear;
   }
+  .chip.active:hover{
+    transform: scale(1.1);
+  }
+
   @media (min-width: 900px) {
     .chip-container {
       justify-content: center;

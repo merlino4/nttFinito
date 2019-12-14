@@ -9,6 +9,7 @@ import Stores from "./Stores";
 import wizard from '../lib/wizard'
 import Navigation from './Navigation'
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -99,6 +100,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <div className="App-container">
+      
 
           {/* CHIP CONTAINER */}
           <BreadCrumb activeIndex={activeIndex} selectChip = {this.selectChip} steps={steps}></BreadCrumb>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/chip.css';
 import Chip from './Chip'
-import axios from 'axios';
+
 
 
 

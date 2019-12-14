@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import img from '../../src/assets/img/attivita_1.jpg'
 import '../style/result.css'
 
@@ -31,37 +30,38 @@ class Results extends React.Component {
             <div className="finalCard">
                 <h1>ecco cosa abbiamo trovato per te</h1>
                 <div className="resultDesktop">
-            <div className="results" key={res.id}>
-            <div className="resultTitle">
-                <h2>{res.title}</h2>
+                    <div className="results" key={res.id}>
+                        <div className="resultTitle">
+                            <h2>{res.title}</h2>
+                        </div>
+                        <div className="contentResult">
+                            <div className="resultPhoto">
+                                <img src={img} alt="immagine"></img>
+                            </div>
+                            <div className="resultDescription">
+                                <p>{res.description}</p>
+                            </div>
+                        </div>
+                        <div className="redirectButton">
+                           
+                                <a href={res.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hvr-wobble-horizontal"
+                                >
+                                    vai allo store</a>
+                                    
+
+                        </div>
+                    </div>
                 </div>
-                <div className="contentResult">
-                <div className="resultPhoto">
-                <img  src={img} alt="immagine"></img>
-                </div>
-                <div className="resultDescription">
-                <p>{res.description}</p>
-                </div>
-                </div>
-                <div className="redirectButton">    
-                
-                <a href={res.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="transitionButton, hover-3"
-                >
-                    vai allo store</a>
-                 
-                </div>
-                </div> 
-            </div>
             </div>
 
         )
 
 
         )
-       // console.log(treeResult);
+        // console.log(treeResult);
         return (
             <div>
                 {renderMap}
