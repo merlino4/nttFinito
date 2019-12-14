@@ -3,7 +3,7 @@ import {Redirect} from 'react-router-dom'
 import '../style/store.css'
 import Header from '../components/Header'
 import stores from '../lib/stores'
-import Bg from '../assets/img/attivita_2.jpg'
+import Bg from '../assets/img/bg1.jpg'
 
 
 class Stores extends React.Component {

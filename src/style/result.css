@@ -1,20 +1,19 @@
+
 .contentResult{
     display: flex;
     flex-direction: row;
 }
  .redirectButton{
-    width: 100%;
     height: 10px;
-    /* background-color: #66cc33; */
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    /* margin: auto; */
     color: #66cc33;
-    /* margin: 0; */
-    /* padding: 9px 0px; */
     padding-bottom: 6px;
+    position: relative;
+    cursor: pointer;
 }
+
 .redirectButton a{
     font-size: 18px;
     font-weight: bold;
@@ -26,6 +25,11 @@
     color: #66cc33;
     text-transform: uppercase;
     text-decoration:none; 
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.redirectButton:hover{
+    border: #66cc33 1px solid;
 }
 .resultTitle h2{
     font-size: 32px;

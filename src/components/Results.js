@@ -43,8 +43,15 @@ class Results extends React.Component {
                 <p>{res.description}</p>
                 </div>
                 </div>
-                <div className="redirectButton">
-                <a href={res.url} target="_blank" rel="noopener noreferrer">vai allo store</a>
+                <div className="redirectButton">    
+                
+                <a href={res.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transitionButton, hover-3"
+                >
+                    vai allo store</a>
+                 
                 </div>
                 </div> 
             </div>

@@ -25,7 +25,7 @@ background-color: rgba(0, 0, 0, 0.3);
 }
 .stores .content  select{
   width: 375px;
-height: 40px;
+height: 60px;
 box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.12);
 background-color: #ffffff;
 }
@@ -35,7 +35,9 @@ background-color: #ffffff;
   object-fit: contain;
   border: none;
   background-color: #66cc33;
+  transition: all 0.3s linear;
 }
+
 .stores .content button span{
   width: 101px;
   height: 31px;
@@ -78,5 +80,8 @@ background-color: #ffffff;
   }
   .mappa{
       display: none;
+  }
+  .stores .content  select{
+  height: 40px;
   }
 }
