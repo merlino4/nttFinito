@@ -98,6 +98,13 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <div className="header-help">
+          <a href="https://www.leroymerlin.it/aiuto" target="_blank" rel="noopener noreferrer" class="assistenza">
+          <i class="fa far fa-question-circle"></i>
+            
+            <div className="paragraph">aiuto</div>
+            </a>
+          </div>
         </header>
         <div className="App-container">
       

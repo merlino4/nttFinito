@@ -41,7 +41,51 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  animation: border 2s infinite;
 }
+/* .App-header::after {
+  animation: border 1s 0.5s infinite;
+} */
+
+/* @keyframes border {
+  0% {
+    width: 0;
+    height: 100%;
+  }
+  10% {
+    width: 0;
+    height: 100%;
+  }
+  25% {
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  } */
+
+/* @keyframes borderColor {
+  0% {
+    border-bottom-color: #60daaa;
+    border-left-color: #60daaa;
+  }
+  50% {
+    border-bottom-color: #60daaa;
+    border-left-color: #60daaa;
+  }
+  51% {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  } */
 
 .App-container {
   margin: 16px;
@@ -112,8 +156,37 @@ position: relative;
   font-family: LeroyMerlinLight;
   margin-top: 8px;
 }
+.header-help{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-help i{
+  font-size: 25px;
+  font-weight: light;
+  width: 50px;
+  height: auto;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+.header-help a{
 
-
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-help .paragraph{
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+}
 /* MEDIA QUERY BREAKPONT EXAMPLE */
 
 /* tablet portrait */
@@ -193,4 +266,26 @@ position: relative;
     flex-direction: row;
     justify-content: center;
 }
+}
+@media (max-width: 800px) {
+  * {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    }
 }
