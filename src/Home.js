@@ -12,6 +12,8 @@ const Home = () => {
         <div>
         <Navigation/>
         <Switch>
+        {/* <Route exact path={`${process.env.REACT_APP_API_URL}/wizard`} component={Wizard} />
+        <Route path={`${process.env.REACT_APP_API_URL}/`} component={Stores} /> */}
         <Route  exact path="/" component={Stores}/>
         <Route  exact path="/wizard" component={Wizard}/>
         </Switch>
