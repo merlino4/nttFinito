@@ -12,13 +12,7 @@ class Results extends React.Component {
 
 
 
-        // const selectedResults = treeResult.map(resultId => {
-        //     if (!treeResult) {
-        //         return false;
-        //     }
-        //     return results.find(r => r.id === resultId)
-        // }
-        // )
+  
 
         const selectedResultsFilter = results.filter(r => {
             if (!treeResult) {
@@ -49,7 +43,7 @@ class Results extends React.Component {
                                     rel="noopener noreferrer"
                                     className="hvr-wobble-horizontal"
                                 >
-                                    vai allo store</a>
+                                    ecco cosa ti aiutera a svolgere al meglio il tuo lavoro</a>
                                     
 
                         </div>
@@ -61,7 +55,7 @@ class Results extends React.Component {
 
 
         )
-        // console.log(treeResult);
+      
         return (
             <div>
                 {renderMap}
@@ -69,14 +63,7 @@ class Results extends React.Component {
         );
     }
 }
-// //selection = [0,4,5,8]
 
-// const resultIds = wizard.navigate([0, 0, 0, 0], tree, 4);
-
-
-
-
-// console.log(JSON.stringify(selectedResults, null, 2))
 
 
 export default Results;

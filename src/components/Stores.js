@@ -32,7 +32,7 @@ componentDidMount(){
     }
     renderRedirect = () => {
       if (this.state.redirect) {
-        return <Redirect to='/wizard' />
+        return <Redirect to={`${process.env.REACT_APP_API_URL}/wizard`} />
       }
     }
     changeStore = (e) =>{

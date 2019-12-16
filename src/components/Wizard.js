@@ -26,13 +26,14 @@ class App extends React.Component {
 
   }
 
-  selectChip(chipIndex){
-    const remainingAnswers = this.state.selectedAnswers.slice(0,chipIndex)
+  selectChip(chipIndex) {
+    const remainingAnswers = this.state.selectedAnswers.slice(0, chipIndex);
+    if (this.state.activeIndex !== this.state.steps.length ) {
       this.setState({
-        activeIndex: chipIndex,
-        selectedAnswers:remainingAnswers
-      })
-      console.log(remainingAnswers)
+      activeIndex: chipIndex,
+      selectedAnswers: remainingAnswers
+    });
+    }    
   }
 
   selectCard = i => {
@@ -131,7 +132,8 @@ class App extends React.Component {
       <div>
       <Navigation/>
       <Switch>
-      <Route path="/stores" component={Stores}/>
+      <Route path={`${process.env.REACT_APP_API_URL}/wizard`} component={Stores}/>
+      
       </Switch>
       </div>
       </BrowserRouter>
