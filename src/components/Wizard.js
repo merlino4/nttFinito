@@ -128,7 +128,7 @@ class App extends React.Component {
           {/*  RESULTS */}
           {resultsComponent}
           
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <div>
       <Navigation/>
       <Switch>
@@ -136,7 +136,7 @@ class App extends React.Component {
       
       </Switch>
       </div>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
         </div>
       </div>

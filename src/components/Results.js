@@ -22,7 +22,7 @@ class Results extends React.Component {
         })
         const renderMap = selectedResultsFilter.map(res => (
             <div className="finalCard">
-                <h1>ecco cosa abbiamo trovato per te</h1>
+                <h1>ecco cosa ti aiutera a svolgere al meglio il tuo lavoro</h1>
                 <div className="resultDesktop">
                     <div className="results" key={res.id}>
                         <div className="resultTitle">
@@ -43,7 +43,9 @@ class Results extends React.Component {
                                     rel="noopener noreferrer"
                                     className="hvr-wobble-horizontal"
                                 >
-                                    ecco cosa ti aiutera a svolgere al meglio il tuo lavoro</a>
+                                    
+                                    ecco cosa abbiamo trovato per te </a>
+                                   
                                     
 
                         </div>
