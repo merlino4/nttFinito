@@ -12,7 +12,7 @@ class Results extends React.Component {
 
 
 
-  
+
 
         const selectedResultsFilter = results.filter(r => {
             if (!treeResult) {
@@ -21,8 +21,7 @@ class Results extends React.Component {
             return treeResult.includes(r.id)
         })
         const renderMap = selectedResultsFilter.map(res => (
-            <div className="finalCard">
-                <h1>ecco cosa ti aiutera a svolgere al meglio il tuo lavoro</h1>
+            <div className="finalCard">                
                 <div className="resultDesktop">
                     <div className="results" key={res.id}>
                         <div className="resultTitle">
@@ -37,16 +36,16 @@ class Results extends React.Component {
                             </div>
                         </div>
                         <div className="redirectButton">
-                           
-                                <a href={res.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hvr-wobble-horizontal"
-                                >
-                                    
-                                    ecco cosa abbiamo trovato per te </a>
-                                   
-                                    
+
+                            <a href={res.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hvr-wobble-horizontal"
+                            >
+
+                                ecco cosa abbiamo trovato per te </a>
+
+
 
                         </div>
                     </div>
@@ -57,11 +56,13 @@ class Results extends React.Component {
 
 
         )
-      
+
         return (
-            <div>
-                {renderMap}
-            </div>
+            <div className="lasttitle">
+            <h1>ecco cosa abbiamo trovato per te</h1>
+            <div>{renderMap}</div>;
+          </div>
+    
         );
     }
 }

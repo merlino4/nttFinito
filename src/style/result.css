@@ -109,7 +109,7 @@
 
 
 @media (max-width: 600px) {
-    .finalCard h1{
+    .lasttitle h1{
         font-size: 30px;
         font-weight: bold;
         font-stretch: normal;
@@ -184,7 +184,7 @@
  
   }
   @media (min-width: 601px) {
-    .finalCard h1{
+    .lasttitle h1{
         font-size: 30px;
         font-weight: bold;
         font-stretch: normal;
